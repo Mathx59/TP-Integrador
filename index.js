@@ -10,6 +10,15 @@ window.addEventListener("load", function () {
 
 
 
+$(document).ready(function() {
+    $('a[href*=\\#]').on('click', function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop : $(this.hash).offset().top - 80
+        }, 500);
+    });
+});
+
 //menu hamburguesa
 const links = document.querySelectorAll(".menuLinks li a");
 const ham = document.querySelector('.ham');
