@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
 
 
 
-
+//Smooth scroll
 $(document).ready(function() {
     $('a[href*=\\#]').on('click', function(e){
         e.preventDefault();
@@ -50,7 +50,7 @@ $(function () {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3900,
+        autoplaySpeed: 2500,
         dots: false,
         centerModel: true,
         centerPadding: '60px',
