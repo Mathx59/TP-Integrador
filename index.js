@@ -3,18 +3,18 @@ const carga = document.getElementById("carga");
 
 window.addEventListener("load", function () {
     carga.style.display = "none";
-    
+
 });
 
 
 
 
 //Smooth scroll
-$(document).ready(function() {
-    $('a[href*=\\#]').on('click', function(e){
+$(document).ready(function () {
+    $('a[href*=\\#]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop : $(this.hash).offset().top - 80
+            scrollTop: $(this.hash).offset().top - 80
         }, 500);
     });
 });
@@ -29,13 +29,16 @@ const barras = document.querySelectorAll('.ham span');
 
 ham.addEventListener('click', () => {
     enlaces.classList.toggle('activado');
-    barras.forEach(child => {child.classList.toggle('animado')});
+    barras.forEach(child => { child.classList.toggle('animado') });
     ham.classList.toggle('girar');
 });
 
 links.forEach((Element) => {
     Element.addEventListener("click", () => {
-        enlaces.classList.toggle('activado')
+        enlaces.classList.toggle('activado');
+        barras.forEach(child => { child.classList.toggle('animado') });
+        ham.classList.toggle('girar');
+
     });
 });
 
@@ -53,7 +56,7 @@ $(function () {
         autoplaySpeed: 2500,
         dots: false,
         centerModel: true,
-        centerPadding: '60px',
+        centerPadding: '50px',
         responsive: [
             {
                 breakpoint: 1440,
@@ -61,7 +64,7 @@ $(function () {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    
+
                 }
             },
             {

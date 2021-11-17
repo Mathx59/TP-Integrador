@@ -1276,7 +1276,7 @@ footer .footer-bar a {
   .register .registerUser {
     top: 50%;
     left: 50%;
-    width: 290px;
+    width: 310px;
     height: 600px;
   }
   .register .registerUser input {
@@ -1292,7 +1292,7 @@ footer .footer-bar a {
   .login .LoginUser {
     top: 50%;
     left: 50%;
-    width: 290px;
+    width: 310px;
     height: 455px;
   }
   .login .LoginUser input {
